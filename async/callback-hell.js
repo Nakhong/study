@@ -30,7 +30,8 @@ class UserStorage {
 const userStorage = new UserStorage();
 const id = prompt("enter your id");
 const password = prompt("enter your password");
-
+ // promise를 사용하고 있는 비동기 함수를 동기함수처럼 사용할 수 있게 해주는 도구인 
+//  async 와 await에 대한 내용이다.
 async function checkUser() {
   try {
     const userId = await userStorage.loginUser(id, password);
@@ -40,6 +41,7 @@ async function checkUser() {
     console.log(error);
   }
 }
+
 checkUser();
 
 // //async & wait homework
